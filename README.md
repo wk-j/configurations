@@ -14,6 +14,11 @@ Paste this code into `simpleDownload`
     "target": ".editorconfig"
   },
   {
+    "name": ".gitignore",
+    "url": "https://raw.githubusercontent.com/wk-j/wk-template/master/.gitignore",
+    "target": ".gitignore"
+  },
+  {
     "name": "omnisharp.json",
     "url": "https://raw.githubusercontent.com/wk-j/wk-template/master/omnisharp.json",
     "target": "omnisharp.json"
@@ -22,6 +27,11 @@ Paste this code into `simpleDownload`
     "name": "tsconfig.json",
     "url": "https://raw.githubusercontent.com/wk-j/wk-template/master/tsconfig.json",
     "target": "tsconfig.json"
+  },
+  {
+    "name": "tslint.json",
+    "url": "https://raw.githubusercontent.com/wk-j/wk-template/master/tslint.json",
+    "target": "tslint.json"
   },
   {
     "name": "scripts/App.csx",
