@@ -1,6 +1,12 @@
-bin
-obj
 .DS_Store
-packages
+
 node_modules
 dist
+.cache
+
+bin
+obj
+packages
+tools
+
+.paket
