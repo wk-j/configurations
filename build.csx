@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 var dir = new DirectoryInfo(".");
 var files = dir.GetFiles("*.*", SearchOption.AllDirectories);
 var interested = files
-    .Where(x => x.Name != "TEMPLATE.md" && x.Name != "README.md" && x.Name != "build.csx" && !x.FullName.Contains(".git"))
+    .Where(x => x.Name != "TEMPLATE.md" && x.Name != "README.md" && x.Name != "build.csx" && !(x.FullName.Contains(".git") && x.Name != ".gitignore"))
     .Select(x => new { Path = x.FullName.Replace(dir.FullName, string.Empty).TrimStart('/'), x.Name });
 
 var settings = interested.Select(x => new {
