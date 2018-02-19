@@ -19,6 +19,16 @@ Paste this code into `simpleDownload`
     "target": ".editorconfig"
   },
   {
+    "name": ".gitignore",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.gitignore",
+    "target": ".gitignore"
+  },
+  {
+    "name": "tslint.json",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/tslint.json",
+    "target": "tslint.json"
+  },
+  {
     "name": "tsconfig.json",
     "url": "https://raw.githubusercontent.com/wk-j/configurations/master/tsconfig.json",
     "target": "tsconfig.json"
