@@ -13,7 +13,7 @@ var interested = files
 
 var settings = interested.Select(x => new {
     name = x.Path,
-    url = $"https://raw.githubusercontent.com/wk-j/wk-template/master/{x.Path}",
+    url = $"https://raw.githubusercontent.com/wk-j/configurations/master/{x.Path}",
     target = x.Path
 });
 
