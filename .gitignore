@@ -11,3 +11,8 @@ tools
 publish
 
 .paket
+.settings
+.classpath
+.project
+target
+BenchmarkDotNet.Artifacts

@@ -1,4 +1,5 @@
 {
+    "omnisharp.path": "latest",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -14,6 +15,7 @@
     "search.exclude": {
         "node_modules": true,
         "dist": true,
-        "build": true
+        "build": true,
+        ".cache": true
     }
 }

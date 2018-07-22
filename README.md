@@ -9,11 +9,6 @@ Paste this code into `simpleDownload`
 ```json
 [
   {
-    "name": "omnisharp.json",
-    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/omnisharp.json",
-    "target": "omnisharp.json"
-  },
-  {
     "name": ".editorconfig",
     "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.editorconfig",
     "target": ".editorconfig"
@@ -24,9 +19,19 @@ Paste this code into `simpleDownload`
     "target": ".gitignore"
   },
   {
-    "name": "tslint.json",
-    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/tslint.json",
-    "target": "tslint.json"
+    "name": "build.cake",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/build.cake",
+    "target": "build.cake"
+  },
+  {
+    "name": "omnisharp.json",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/omnisharp.json",
+    "target": "omnisharp.json"
+  },
+  {
+    "name": "pom.xml",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/pom.xml",
+    "target": "pom.xml"
   },
   {
     "name": "tsconfig.json",
@@ -34,14 +39,9 @@ Paste this code into `simpleDownload`
     "target": "tsconfig.json"
   },
   {
-    "name": "cake/ZipRelease.cake",
-    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/cake/ZipRelease.cake",
-    "target": "cake/ZipRelease.cake"
-  },
-  {
-    "name": "cake/BenchmarkDotNet.cake",
-    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/cake/BenchmarkDotNet.cake",
-    "target": "cake/BenchmarkDotNet.cake"
+    "name": "tslint.json",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/tslint.json",
+    "target": "tslint.json"
   },
   {
     "name": ".vscode/settings.json",

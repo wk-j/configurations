@@ -1,11 +1,11 @@
-#! "netcoreapp2.0"
-#r "nuget:NetStandard.Library,2.0"
+#! "netcoreapp2.1"
 #r "nuget:BenchmarkDotNet,0.10.12"
-#r "nuget:System.Memory,4.4.0-preview1-25305-02"
 
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Attributes.Jobs;
 using BenchmarkDotNet.Running;
 
+[InProcess]
 [MemoryDiagnoser]
 public class Test {
 
@@ -18,7 +18,7 @@ public class Test {
 
     [Benchmark]
     public void Slice() {
-        var span = new Span<int>(values, 0);
+        var span = values.AsSpan();
         var a = span.Slice(5, span.Length - 5).Length;
     }
 }
