@@ -4,6 +4,7 @@
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Attributes.Jobs;
 using BenchmarkDotNet.Running;
+using System;
 
 [InProcess]
 [MemoryDiagnoser]
@@ -18,8 +19,7 @@ public class Test {
 
     [Benchmark]
     public void Slice() {
-        var span = values.AsSpan();
-        var a = span.Slice(5, span.Length - 5).Length;
+        // var a = span.Slice(5, span.Length - 5).Length;
     }
 }
 

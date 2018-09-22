@@ -16,6 +16,7 @@ var interested = files
     .Where(x => !x.FullName.Contains(".settings"))
     .Where(x => !x.FullName.Contains(".classpath"))
     .Where(x => !x.FullName.Contains(".project"))
+    .Where(x => !x.FullName.Contains("tools"))
     .Select(x => new { Path = x.FullName.Replace(dir.FullName, string.Empty).TrimStart('/'), x.Name });
 
 var settings = interested.Select(x => new {
