@@ -19,6 +19,11 @@ Paste this code into `simpleDownload`
     "target": ".gitignore"
   },
   {
+    "name": "azure-pipelines.yml",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/azure-pipelines.yml",
+    "target": "azure-pipelines.yml"
+  },
+  {
     "name": "build.cake",
     "url": "https://raw.githubusercontent.com/wk-j/configurations/master/build.cake",
     "target": "build.cake"
