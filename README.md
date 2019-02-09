@@ -14,6 +14,11 @@ Paste this code into `simpleDownload`
     "target": "omnisharp.json"
   },
   {
+    "name": "NuGet.config",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/NuGet.config",
+    "target": "NuGet.config"
+  },
+  {
     "name": "LICENSE",
     "url": "https://raw.githubusercontent.com/wk-j/configurations/master/LICENSE",
     "target": "LICENSE"
