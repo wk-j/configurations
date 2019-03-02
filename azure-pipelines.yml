@@ -8,14 +8,18 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  version: '0.2.2'
-  project: 'src/JsonImport/JsonImport.csproj'
+  version: '0.2.1'
 
 steps:
-- script: dotnet build $(project)
-  displayName: "Build Project"
 
-- script: dotnet pack $(project) --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
-  displayName: 'Pack NuGet'
+- script: dotnet tool install -g Cake.Tool
+  displayName: "Install Cake"
+
+- script: ~/.dotnet/tools/dotnet-cake -target=Pack
+  displayName: 'Build with Cake'
+
+- script: cp .publish/*.nupkg $(Build.ArtifactStagingDirectory)
+  displayName: 'Copy assets'
 
 - task: PublishBuildArtifacts@1
+  displayName: 'Publish artifacts'
