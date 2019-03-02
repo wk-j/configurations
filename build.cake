@@ -14,7 +14,7 @@ var version = DateTime.Now.ToString("yy.MM.dd.HHmm");
 
 Task("Pack").Does(() => {
     var settings = new DotNetCoreMSBuildSettings();
-    settings.Properties["Version"] = new string[] { version };\
+    settings.Properties["Version"] = new string[] { version };
         
     CleanDirectory(publishDir);
     DotNetCorePack($"src/{name}", new DotNetCorePackSettings {
