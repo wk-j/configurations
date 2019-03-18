@@ -9,6 +9,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   version: '0.2.1'
+  repository: "wk-j/azure-release"
 
 steps:
 
@@ -18,8 +19,23 @@ steps:
 - script: ~/.dotnet/tools/dotnet-cake -target=Pack
   displayName: 'Build with Cake'
 
-- script: cp .publish/*.nupkg $(Build.ArtifactStagingDirectory)
-  displayName: 'Copy assets'
+- task: NuGetCommand@2
+  displayName: 'NuGet push'
+  inputs:
+    command: push
+    packagesToPush: '.publish/*.nupkg'
+    nuGetFeedType: external
+    publishFeedCredentials: nuget.org
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish artifacts'
+- task: GitHubRelease@0
+  displayName: 'GitHub release (create)'
+  inputs:
+    action: 'create'
+    gitHubConnection: 'github.com'
+    repositoryName: '$(repository)'
+    title: $(Build.BuildNumber)
+    tagSource: 'manual'
+    tag: $(Build.BuildNumber)
+    releaseNotesSource: input
+    releaseNotes: 'New release $(Build.BuildNumber)'
+    assets: '.publish/*.nupkg'
