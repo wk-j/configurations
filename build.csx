@@ -5,13 +5,15 @@
 using System.IO;
 using Newtonsoft.Json;
 
+Console.WriteLine("Hello, world!");
+
 var dir = new DirectoryInfo(".");
 var files = dir.GetFiles("*.*", SearchOption.AllDirectories);
 var interested = files
     .Where(x => x.Name != "TEMPLATE.md")
     .Where(x => x.Name != "README.md")
     .Where(x => x.Name != "build.csx")
-    .Where(x => !(x.FullName.Contains(".git") && x.Name != ".gitignore"))
+    .Where(x => !(x.FullName.Contains(".git/") && x.Name != ".gitignore"))
     .Where(x => !x.FullName.Contains("Artifacts"))
     .Where(x => !x.FullName.Contains(".settings"))
     .Where(x => !x.FullName.Contains(".classpath"))

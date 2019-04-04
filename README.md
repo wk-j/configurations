@@ -67,6 +67,16 @@ Paste this code into `simpleDownload`
     "name": ".vscode/settings.json",
     "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.vscode/settings.json",
     "target": ".vscode/settings.json"
+  },
+  {
+    "name": ".github/ISSUE_TEMPLATE/feature-request.md",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.github/ISSUE_TEMPLATE/feature-request.md",
+    "target": ".github/ISSUE_TEMPLATE/feature-request.md"
+  },
+  {
+    "name": ".github/ISSUE_TEMPLATE/bug-report.md",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.github/ISSUE_TEMPLATE/bug-report.md",
+    "target": ".github/ISSUE_TEMPLATE/bug-report.md"
   }
 ]
 ```
