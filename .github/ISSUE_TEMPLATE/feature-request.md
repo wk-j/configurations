@@ -1,6 +1,6 @@
 ---
-name: Feature request 🎉
+name:  🎉 Feature request
 about: Suggest an idea for this project
 ---
 
-### Feature request :tada:
+### :tada: Feature request
