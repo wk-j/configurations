@@ -1,6 +1,7 @@
 ---
-name: 🐛  Bug report
+name: Bug report
 about: Create a report about something that is not working
+labels: bug
 ---
 
-### :bug:  Bug report
+### Bug report
