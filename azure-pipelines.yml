@@ -53,5 +53,5 @@ steps:
     tagSource: 'manual'
     tag: $(Build.BuildNumber)
     releaseNotesSource: input
-    releaseNotes: 'New release $(Build.BuildNumber)'
+    releaseNotes: ':rocket: $(Build.BuildNumber)'
     assets: '.publish/*.nupkg'
