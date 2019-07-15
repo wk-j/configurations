@@ -6,6 +6,15 @@
 pool:
   vmImage: 'Ubuntu 16.04'
 
+# pool:
+#   vmImage: 'vs2017-win2016'
+
+# pool:
+#   vmImage: 'windows-2019'
+
+# pool:
+#   vmImage: 'macOS-10.13'
+
 variables:
   buildConfiguration: 'Release'
   version: '0.2.1'
@@ -13,18 +22,31 @@ variables:
 
 steps:
 
+# - task: DotNetCoreInstaller@0
+#   inputs:
+#     version: '3.0.100-preview3-010431'
+
+# - script: '%USERPROFILE%/.dotnet/tools/dotnet-cake -target=Pack'
+#   displayName: 'Build with Cake'
+
 - script: dotnet tool install -g Cake.Tool
   displayName: "Install Cake"
 
-# -- TEST --
+# -- TEST
 
 - script: |
-    dotnet test tests/MyWeb.Tests/MyWeb.Tests.csproj --configuration Release  --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
+    dotnet test tests/MyWeb.Tests/MyWeb.Tests.csproj \
+      --configuration Release  \
+      --logger trx \
+      /p:CollectCoverage=true \
+      /p:CoverletOutputFormat=cobertura
   displayName: Run tests
 
 - script: |
     dotnet tool install -g dotnet-reportgenerator-globaltool
-     ~/.dotnet/tools/reportgenerator -reports:"./tests/**/coverage.cobertura.xml" -targetdir:./.tests -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
+    ~/.dotnet/tools/reportgenerator -reports:"./tests/**/coverage.cobertura.xml" \
+      -targetdir:./.tests \
+      -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
   displayName: Create code coverage report
 
 - task: PublishTestResults@2
@@ -39,12 +61,13 @@ steps:
     summaryFileLocation: '$(Build.SourcesDirectory)/.tests/Cobertura.xml'
     reportDirectory: '$(Build.SourcesDirectory)/.tests'
 
-# -- BUILD --
+# -- BUILD
 
 - script: ~/.dotnet/tools/dotnet-cake -target=Pack
   displayName: 'Build with Cake'
 
-# -- PUBLISH --
+
+# -- PUBLISH
 
 - task: NuGetCommand@2
   displayName: 'NuGet push'
@@ -64,5 +87,5 @@ steps:
     tagSource: 'manual'
     tag: $(Build.BuildNumber)
     releaseNotesSource: input
-    releaseNotes: 'New release $(Build.BuildNumber)'
+    releaseNotes: ':rocket: $(Build.BuildNumber)'
     assets: '.publish/*.nupkg'

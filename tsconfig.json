@@ -9,6 +9,7 @@
             "es6"
         ],
         "sourceMap": true,
+        "esModuleInterop": true,
         "rootDir": "."
     },
     "exclude": [

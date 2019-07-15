@@ -1,6 +1,8 @@
 ---
-name:  🎉  Feature request
+name:  Feature request
+labels: enhancement
 about: Suggest an idea for this project
+assignees: wk-j
 ---
 
-### :tada:  Feature request
+### Feature request
