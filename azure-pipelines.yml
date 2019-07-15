@@ -1,17 +1,10 @@
-# ASP.NET Core
-# Build and test ASP.NET Core web applications targeting .NET Core.
-# Add steps that run tests, create a NuGet package, deploy, and more:
-# https://docs.microsoft.com/vsts/pipelines/languages/dotnet-core
-
 pool:
   vmImage: 'Ubuntu 16.04'
 
 # pool:
 #   vmImage: 'vs2017-win2016'
-
 # pool:
 #   vmImage: 'windows-2019'
-
 # pool:
 #   vmImage: 'macOS-10.13'
 
@@ -21,13 +14,6 @@ variables:
   repository: "wk-j/azure-release"
 
 steps:
-
-# - task: DotNetCoreInstaller@0
-#   inputs:
-#     version: '3.0.100-preview3-010431'
-
-# - script: '%USERPROFILE%/.dotnet/tools/dotnet-cake -target=Pack'
-#   displayName: 'Build with Cake'
 
 - script: dotnet tool install -g Cake.Tool
   displayName: "Install Cake"
