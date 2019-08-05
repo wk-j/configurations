@@ -69,6 +69,11 @@ Paste this code into `simpleDownload`
     "target": ".vscode/settings.json"
   },
   {
+    "name": ".circleci/config.yml",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.circleci/config.yml",
+    "target": ".circleci/config.yml"
+  },
+  {
     "name": ".github/ISSUE_TEMPLATE/feature-request.md",
     "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.github/ISSUE_TEMPLATE/feature-request.md",
     "target": ".github/ISSUE_TEMPLATE/feature-request.md"

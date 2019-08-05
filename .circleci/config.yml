@@ -1,0 +1,62 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/app
+
+    docker:
+    - image: circleci/openjdk:8-jdk-stretch
+
+    steps:
+    - checkout
+
+    - restore_cache:
+        key: app-{{ checksum "pom.xml" }}
+
+    - run: |
+        mvn assembly:assembly -DdescriptorId=jar-with-dependencies -DbuildId=${CIRCLE_BUILD_NUM}
+        mkdir jar
+        cp target/*.jar jar
+
+    - save_cache:
+        paths:
+        - ~/.m2
+        key: app-{{ checksum "pom.xml" }}
+
+    - persist_to_workspace:
+          root: .
+          paths:
+            - jar
+
+    - store_artifacts:
+        path: jar
+
+  publish-github-release:
+    docker:
+      - image: cibuilds/github:0.10
+
+    steps:
+      - attach_workspace:
+          at: /tmp
+
+      - run:
+          name: "Publish release on GitHub"
+          command: |
+            VERSION="0.1.0.${CIRCLE_BUILD_NUM}"
+            ghr \
+              -t ${GITHUB_TOKEN} \
+              -u ${CIRCLE_PROJECT_USERNAME} \
+              -r ${CIRCLE_PROJECT_REPONAME} \
+              -c ${CIRCLE_SHA1} \
+              -delete \
+              -recreate  \
+              ${VERSION}  \
+              /tmp/jar
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - build
+      - publish-github-release:
+          requires:
+            - build
