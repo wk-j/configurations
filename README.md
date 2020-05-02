@@ -74,9 +74,9 @@ Paste this code into `simpleDownload`
     "target": ".circleci/config.yml"
   },
   {
-    "name": ".github/workflows/build.yml",
-    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.github/workflows/build.yml",
-    "target": ".github/workflows/build.yml"
+    "name": ".github/workflows/Build.yaml",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.github/workflows/Build.yaml",
+    "target": ".github/workflows/Build.yaml"
   },
   {
     "name": ".github/ISSUE_TEMPLATE/feature-request.md",
