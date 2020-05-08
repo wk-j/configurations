@@ -24,6 +24,11 @@ Paste this code into `simpleDownload`
     "target": "LICENSE"
   },
   {
+    "name": "Dockerfile",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/Dockerfile",
+    "target": "Dockerfile"
+  },
+  {
     "name": "pom.xml",
     "url": "https://raw.githubusercontent.com/wk-j/configurations/master/pom.xml",
     "target": "pom.xml"
@@ -59,6 +64,16 @@ Paste this code into `simpleDownload`
     "target": "tsconfig.json"
   },
   {
+    "name": "diagram/config.puml",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/diagram/config.puml",
+    "target": "diagram/config.puml"
+  },
+  {
+    "name": "diagram/architecture.puml",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/diagram/architecture.puml",
+    "target": "diagram/architecture.puml"
+  },
+  {
     "name": "scripts/App.csx",
     "url": "https://raw.githubusercontent.com/wk-j/configurations/master/scripts/App.csx",
     "target": "scripts/App.csx"
@@ -72,6 +87,16 @@ Paste this code into `simpleDownload`
     "name": ".circleci/config.yml",
     "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.circleci/config.yml",
     "target": ".circleci/config.yml"
+  },
+  {
+    "name": "diagram/vendor/office.puml",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/diagram/vendor/office.puml",
+    "target": "diagram/vendor/office.puml"
+  },
+  {
+    "name": "diagram/vendor/azure.puml",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/diagram/vendor/azure.puml",
+    "target": "diagram/vendor/azure.puml"
   },
   {
     "name": ".github/workflows/Build.yaml",
