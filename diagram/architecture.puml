@@ -1,0 +1,24 @@
+@startuml
+
+' !include vendor/office.puml
+!include vendor/azure.puml
+!include config.puml
+
+' skinparam defaultTextAlignment center
+
+title PDF Engine
+
+AzureBatch(sigs, "Signature(s).png", "")
+AzureFileStorage(inputPdf, "Template.pdf", "")
+AzureStorage(dict, Dictionary, "")
+
+AzureFileStorage(outPdf, "Rendered.pdf", "")
+
+AzureAutomation(engine, "PDF Engine", "")
+
+sigs --> engine
+inputPdf --> engine
+dict --> engine
+engine --> outPdf
+
+@enduml

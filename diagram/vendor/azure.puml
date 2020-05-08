@@ -1,0 +1,16 @@
+@startuml
+
+!include <azure/AzureCommon.puml>
+!include <azure/AzureSimplified.puml>
+!include <azure/Management/AzureAutomation.puml>
+!include <azure/Storage/AzureDataLakeStorage.puml>
+!include <azure/Databases/AzureDatabaseForPostgreSQL.puml>
+!include <azure/Storage/AzureFileStorage.puml>
+!include <azure/Web/AzureCDN.puml>
+!include <azure/Databases/AzureSqlStretchDatabase.puml>
+!include <azure/Compute/AzureBatch.puml>
+!include <azure/Storage/AzureStorage.puml>
+
+left to right direction
+
+@enduml
