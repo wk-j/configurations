@@ -1,5 +1,7 @@
 @startuml
 
+' https://github.com/wk-j/plant-icons/blob/master/markdown/Azure.md
+
 !include vendor/azure.puml
 !include config.puml
 
