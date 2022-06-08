@@ -24,6 +24,11 @@ Paste this code into `simpleDownload`
     "target": "LICENSE"
   },
   {
+    "name": "mkdocs.yaml",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/mkdocs.yaml",
+    "target": "mkdocs.yaml"
+  },
+  {
     "name": "Dockerfile",
     "url": "https://raw.githubusercontent.com/wk-j/configurations/master/Dockerfile",
     "target": "Dockerfile"
@@ -97,6 +102,16 @@ Paste this code into `simpleDownload`
     "name": "diagram/vendor/azure.puml",
     "url": "https://raw.githubusercontent.com/wk-j/configurations/master/diagram/vendor/azure.puml",
     "target": "diagram/vendor/azure.puml"
+  },
+  {
+    "name": ".github/workflows/MkDocs.yaml",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.github/workflows/MkDocs.yaml",
+    "target": ".github/workflows/MkDocs.yaml"
+  },
+  {
+    "name": ".github/workflows/Note.yaml",
+    "url": "https://raw.githubusercontent.com/wk-j/configurations/master/.github/workflows/Note.yaml",
+    "target": ".github/workflows/Note.yaml"
   },
   {
     "name": ".github/workflows/Build.yaml",
